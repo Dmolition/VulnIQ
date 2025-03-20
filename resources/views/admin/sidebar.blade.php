@@ -84,7 +84,7 @@
               </li>
 
               <li class="nav-item">
-                <a href="{{url('scan_detail')}}" class="nav-link">
+                <a href="{{url('scan_start')}}" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Scan Details</p>
                 </a>

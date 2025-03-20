@@ -6,7 +6,9 @@ use Illuminate\Http\Request;
 
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 
+use App\Models\scan_results;
 use App\Models\Scans;
 
 class AdminController extends Controller
@@ -91,6 +93,54 @@ class AdminController extends Controller
 
 
     }
+
+
+    public function scan_start($id)
+    {
+        // Fetch the scan data from the database using the given $id
+        $data = Scans::find($id);
+    
+        // Check if scan data exists
+        if (!$data) {
+            return redirect()->back()->with('error', 'Scan not found.');
+        }
+    
+        // Retrieve the target IP address from the database (column 'target')
+        $targetIp = $data->target; // Using the 'target' column instead of 'target_ip'
+    
+        // Sanitize the target IP to avoid security issues
+        $targetIp = escapeshellarg($targetIp);
+    
+        // Nmap command to run the scan (you can customize the scan options as needed)
+        $command = '"C:\\Program Files (x86)\\Nmap\\nmap.exe" -sT ' . $targetIp . ' 2>&1'; // Capture stderr as well
+
+
+        // Execute the Nmap scan
+        $output = null;
+        $resultCode = null;
+    
+        // Execute the command and ensure it waits for completion
+        exec($command, $output, $resultCode);
+    
+        // Debugging: Log the result code and output
+        \Log::info("Nmap Result Code: $resultCode");
+        \Log::info("Nmap Output: " . implode("\n", $output));
+    
+        // Check if the Nmap command was successful
+        if ($resultCode === 0) {
+            // Process the Nmap output if necessary
+            return view('admin.scan_detail', compact('output'));
+        } else {
+            // If the scan failed, return an error message
+            return redirect()->back()->with('error', 'Failed to start Nmap scan.');
+        }
+ 
+
+    }
+
+
+
+    
 
     public function scan_detail()
     {

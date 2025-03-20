@@ -3,6 +3,9 @@
 
 <head>
     @include('admin.css')
+    
+
+
 </head>
 
 <body class="hold-transition dark-mode sidebar-mini layout-fixed layout-navbar-fixed layout-footer-fixed">
@@ -39,6 +42,7 @@
                                 <th>Last Scanned</th>
                                 <th>Progress</th>
                                 <th style="width: 40px">Label</th>
+                                <th>Start</th>
                                 <th>Delete</th>
                                 
                             </tr>
@@ -58,8 +62,11 @@
                                     </div>
                                 </td>
                                 <td><span class="badge bg-danger">55%</span></td>
+                                <td><a onclick="return confirm('Are you sure you want to start scan?');" class="btn btn-primary"
+                                href="{{url('scan_start',$data->id)}}"> Start </a> </td>
                                 <td><a onclick="return confirm('Are you sure you want to delete?');" class="btn btn-danger"
-                                 href="{{url('scan_delete',$data->id)}}"> Delete </a> </td>
+                                href="{{url('scan_delete',$data->id)}}"> Delete </a> </td>
+
                                 
                             </tr>
                         @endforeach

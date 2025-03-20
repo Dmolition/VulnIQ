@@ -30,4 +30,6 @@ route::get('/display_scan',[AdminController::class,'display_scan']);
 
 route::get('/scan_delete/{id}',[AdminController::class,'scan_delete']);
 
+route::get('/scan_start/{id}',[AdminController::class,'scan_start']);
+
 route::get('/scan_detail',[AdminController::class,'scan_detail']);
