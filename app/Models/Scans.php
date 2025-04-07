@@ -14,7 +14,8 @@ class Scans extends Model
         'description',
         'scan_type',
         'target',
-        'file'
+        'file',
+        'status',
     ];
 
 }

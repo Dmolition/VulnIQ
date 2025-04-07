@@ -9,8 +9,8 @@
         </div>
         <div class="col-lg-5">
           <div class="section-heading">
-            <h6>Your Freedom</h6>
-            <h4>Get a Financial Plan</h4>
+            <h6>Secure your Enterprise</h6>
+            <h4>Get a Security Plan</h4>
           </div>
           <form id="calculate" action="" method="get">
             <div class="row">

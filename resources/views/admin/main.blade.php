@@ -307,7 +307,7 @@
                         <img class="direct-chat-img" src="admin/dist/img/user1-128x128.jpg" alt="message user image">
                         <!-- /.direct-chat-img -->
                         <div class="direct-chat-text">
-                          Is this template really for free? That's unbelievable!
+                          Is this tool really for free? That's unbelievable!
                         </div>
                         <!-- /.direct-chat-text -->
                       </div>
@@ -339,7 +339,7 @@
                         <img class="direct-chat-img" src="admin/dist/img/user1-128x128.jpg" alt="message user image">
                         <!-- /.direct-chat-img -->
                         <div class="direct-chat-text">
-                          Working with AdminLTE on a great new app! Wanna join?
+                          Working with cyberattack on a pentest! Wanna join?
                         </div>
                         <!-- /.direct-chat-text -->
                       </div>
@@ -556,7 +556,7 @@
             <!-- TABLE: LATEST ORDERS -->
             <div class="card">
               <div class="card-header border-transparent">
-                <h3 class="card-title">Latest Orders</h3>
+                <h3 class="card-title">Latest Scans</h3>
 
                 <div class="card-tools">
                   <button type="button" class="btn btn-tool" data-card-widget="collapse">
@@ -573,7 +573,7 @@
                   <table class="table m-0">
                     <thead>
                     <tr>
-                      <th>Order ID</th>
+                      <th>Scan ID</th>
                       <th>Item</th>
                       <th>Status</th>
                       <th>Popularity</th>

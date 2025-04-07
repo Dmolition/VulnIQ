@@ -13,7 +13,7 @@
           <img src="admin/dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
-          <a href="#" class="d-block"> Osama Aldosari</a>
+          <a href="#" class="d-block"> Ahmed Alsaeed</a>
           <p style="font-size: 12px;">Senior Pentester</p>
         </div>
       </div>
@@ -84,7 +84,7 @@
               </li>
 
               <li class="nav-item">
-                <a href="{{url('scan_start')}}" class="nav-link">
+                <a href="{{url('scan_detail')}}" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Scan Details</p>
                 </a>

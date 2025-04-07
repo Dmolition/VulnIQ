@@ -11,27 +11,27 @@
           <div class="owl-testimonials owl-carousel" style="position: relative; z-index: 5;">
             <div class="item">
               <i class="fa fa-quote-left"></i>
-              <p>“Donec et nunc massa. Nullam non felis dignissim, dapibus turpis semper, vulputate lorem. Nam volutpat posuere tellus, in porttitor justo interdum nec. Aenean in dapibus risus, in euismod ligula. Aliquam vel scelerisque elit.”</p>
+              <p>“Cyberattack’s comprehensive vulnerability assessments have been instrumental in identifying and mitigating risks in our systems. Their expertise and thorough approach helped us strengthen our security posture significantly.”</p>
               <h4>David Eigenberg</h4>
-              <span>CEO of Mexant</span>
+              <span>CEO of TechSecure Solutions</span>
               <div class="right-image">
                 <img src="assets/images/testimonials-01.jpg" alt="">
               </div>
             </div>
             <div class="item">
               <i class="fa fa-quote-left"></i>
-              <p>“Etiam id ligula risus. Fusce fringilla nisl nunc, nec rutrum lectus cursus nec. In blandit nibh dolor, at rutrum leo accumsan porta. Nullam pulvinar eros porttitor risus condimentum tempus.”</p>
-              <h4>Andrew Garfield</h4>
-              <span>CTO of Mexant</span>
+              <p>“The penetration testing services from Cyberattack were beyond our expectations. Their team uncovered several critical vulnerabilities we missed, and their actionable recommendations made a real difference.”</p>
+              <h4>Sarah Lee</h4>
+              <span>Security Analyst of Innovatech Systems</span>
               <div class="right-image">
                 <img src="assets/images/testimonials-01.jpg" alt="">
               </div>
             </div>
             <div class="item">
               <i class="fa fa-quote-left"></i>
-              <p>“Ut dictum vehicula massa, ac pharetra leo tincidunt eu. Phasellus in tristique magna, ac gravida leo. Integer sed lorem sapien. Ut viverra mauris sed lobortis commodo.”</p>
-              <h4>George Lopez</h4>
-              <span>Crypto Manager</span>
+              <p>“Cyberattack’s risk management approach gave us the clarity we needed to prioritize and address security risks effectively. They’re our go-to team for ensuring our infrastructure stays secure.”</p>
+              <h4>Mark Williams</h4>
+              <span>IT Security Manager</span>
               <div class="right-image">
                 <img src="assets/images/testimonials-01.jpg" alt="">
               </div>

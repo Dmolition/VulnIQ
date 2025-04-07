@@ -13,9 +13,9 @@
               <div class="row">
                 <div class="col-lg-12">
                   <div class="menu">
-                    <div class="active gradient-border"><span>Web Design</span></div>
-                    <div class="gradient-border"><span>Graphics</span></div>
-                    <div class="gradient-border"><span>Web Coding</span></div>
+                    <div class="active gradient-border"><span>Black Box</span></div>
+                    <div class="gradient-border"><span>White Box</span></div>
+                    <div class="gradient-border"><span>Grey Box</span></div>
                   </div>
                 </div>
                 <div class="col-lg-12">
@@ -29,28 +29,28 @@
                           <span class="title">Client</span>
                         </div>
                         <div class="list-item">
-                          <span class="item item-title">Website Redesign</span>
+                          <span class="item item-title">Web Penetration Test</span>
                           <span class="item">$1,500 to $2,200</span>
-                          <span class="item">2022 Dec 12</span>
-                          <span class="item">Web Biz</span>
+                          <span class="item">2025 Dec 12</span>
+                          <span class="item">RetailTech</span>
                         </div>
                         <div class="list-item">
-                          <span class="item item-title">Website Renovation</span>
+                          <span class="item item-title">Network Vulnerability</span>
                           <span class="item">$2,500 to $3,600</span>
                           <span class="item">2022 Dec 10</span>
                           <span class="item">Online Ads</span>
                         </div>
                         <div class="list-item">
-                          <span class="item item-title">Marketing Plan</span>
+                          <span class="item item-title">Intrusion Detection System</span>
                           <span class="item">$2,500 to $4,200</span>
-                          <span class="item">2022 Dec 8</span>
-                          <span class="item">Web Biz</span>
+                          <span class="item">2025 Dec 8</span>
+                          <span class="item">GlobaNet Inc.</span>
                         </div>
                         <div class="list-item last-item">
-                          <span class="item item-title">All-new Website</span>
+                          <span class="item item-title">Malware Analysis</span>
                           <span class="item">$3,000 to $6,600</span>
-                          <span class="item">2022 Dec 2</span>
-                          <span class="item">Web Presence</span>
+                          <span class="item">2025 Dec 2</span>
+                          <span class="item">SecureCorp</span>
                         </div>
                       </div>
                     </li>
@@ -63,28 +63,28 @@
                           <span class="title">Client</span>
                         </div>
                         <div class="list-item">
-                          <span class="item item-title">Graphics Redesign</span>
+                          <span class="item item-title">Vulnerability Assessment</span>
                           <span class="item">$500 to $800</span>
-                          <span class="item">2022 Nov 24</span>
-                          <span class="item">Media One</span>
+                          <span class="item">2025 Nov 24</span>
+                          <span class="item">TechCorp Solutions</span>
                         </div>
                         <div class="list-item">
-                          <span class="item item-title">Digital Graphics</span>
+                          <span class="item item-title">Code Security Review</span>
                           <span class="item">$1,500 to $3,000</span>
-                          <span class="item">2022 Nov 18</span>
-                          <span class="item">Second Media</span>
+                          <span class="item">2025 Nov 18</span>
+                          <span class="item">DataSecure Inc.</span>
                         </div>
                         <div class="list-item">
-                          <span class="item item-title">New Artworks</span>
+                          <span class="item item-title">Database Audit</span>
                           <span class="item">$2,200 to $4,400</span>
-                          <span class="item">2022 Nov 10</span>
-                          <span class="item">Artwork Push</span>
+                          <span class="item">2025 Nov 10</span>
+                          <span class="item">GlobalTech Ltd.</span>
                         </div>
                         <div class="list-item last-item">
-                          <span class="item item-title">Complex Arts</span>
+                          <span class="item item-title">API Analysis</span>
                           <span class="item">$1,100 to $2,400</span>
-                          <span class="item">2022 Nov 3</span>
-                          <span class="item">Media One</span>
+                          <span class="item">2025 Nov 3</span>
+                          <span class="item">Cloud Innovations</span>
                         </div>
                     </li>
                     <li>
@@ -93,31 +93,31 @@
                           <span class="title">Project Title</span>
                           <span class="title">Budget</span>
                           <span class="title">Estimated</span>
-                          <span class="title">Technology</span>
+                          <span class="title">Client</span>
                         </div>
                         <div class="list-item">
-                          <span class="item item-title">Backend Coding</span>
+                          <span class="item item-title">App Penetration Test</span>
                           <span class="item">$2,000 to $5,000</span>
-                          <span class="item">2022 Nov 28</span>
-                          <span class="item">PHP MySQL</span>
+                          <span class="item">2025 Nov 28</span>
+                          <span class="item">FinTech Solutions</span>
                         </div>
                         <div class="list-item">
-                          <span class="item item-title">New Web App</span>
+                          <span class="item item-title">Network PT Test</span>
                           <span class="item">$1,500 to $3,000</span>
-                          <span class="item">2022 Nov 18</span>
-                          <span class="item">Python Programming</span>
+                          <span class="item">2025 Nov 18</span>
+                          <span class="item">MedSecure Health</span>
                         </div>
                         <div class="list-item">
-                          <span class="item item-title">Frontend Interactions</span>
+                          <span class="item item-title">Cloud Security Health</span>
                           <span class="item">$3,000 to $6,000</span>
-                          <span class="item">2022 Nov 10</span>
-                          <span class="item">JavaScripts</span>
+                          <span class="item">2025 Nov 10</span>
+                          <span class="item">NexGen Technologies</span>
                         </div>
                         <div class="list-item last-item">
-                          <span class="item item-title">Video Creations</span>
+                          <span class="item item-title">IoT Security Test</span>
                           <span class="item">$1,800 to $4,400</span>
-                          <span class="item">2022 Nov 3</span>
-                          <span class="item">Multimedia</span>
+                          <span class="item">2025 Nov 3</span>
+                          <span class="item">SmartHome Solutions</span>
                         </div>
                       </div>
                     </li>
@@ -129,10 +129,10 @@
         </div>
         <div class="col-lg-4">
           <div class="right-content">
-            <h4>Please tell us about your idea and how you want it to be</h4>
-            <p>You are allowed to use this template for your websites. You are <b>NOT allowed</b> to redistribute the template ZIP file on any other template websites.<br><br>Thank you for downloading and using our templates. Please tell your friends about our website.</p>
+            <h4>Please tell us about your project and how you want it to be</h4>
+            <p>We'd love to learn more about your project idea and how you envision it. Feel free to share your vision, and let us know how we can assist in bringing it to life.</p>
             <div class="green-button">
-              <a href="about-us.html">Discover More</a>
+              <a href="about-us.html">Conduct a Demo</a>
             </div>
           </div>
         </div>

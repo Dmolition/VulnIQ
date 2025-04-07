@@ -40,7 +40,7 @@
                                 <th>Description</th>
                                 <th>Scan Type</th>
                                 <th>Last Scanned</th>
-                                <th>Progress</th>
+                                <th>Status</th>
                                 <th style="width: 40px">Label</th>
                                 <th>Start</th>
                                 <th>Delete</th>

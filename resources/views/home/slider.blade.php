@@ -10,7 +10,7 @@
                 <div class="header-text">
                   <h2>Get <em>ready</em> for your enterprise<br>&amp; secure <em>all aspects</em></h2>
                   <div class="div-dec"></div>
-                  <p>Mexant HTML5 Template is provided for free of charge. This layout is based on Boostrap 5 CSS framework. Anyone can download and edit for any professional website. Thank you for visiting TemplateMo website.</p>
+                  <p>Cyberattack specializes in vulnerability and risk management, offering services like penetration testing, vulnerability assessments, and threat hunting as core solutions. We centralize security tools and insights in an intuitive dashboard to help you effectively manage and reduce risks.</p>
                   <div class="buttons">
                     <div class="green-button">
                       <a href="#">Discover More</a>
