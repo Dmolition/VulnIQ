@@ -4,7 +4,7 @@
                   <nav class="main-nav">
                       <!-- ***** Logo Start ***** -->
                       <a href="index.html" class="logo">
-                          <img src="" alt="">
+                          <img src="assets\images\nooo-removebg-preview.png" alt="Logo" style="width: 300px; margin-top: 20px;">
                       </a>
                       <!-- ***** Logo End ***** -->
                       <!-- ***** Menu Start ***** -->
@@ -15,8 +15,7 @@
                           <li class="has-sub">
                               <a href="javascript:void(0)">Pages</a>
                               <ul class="sub-menu">
-                                  <li><a href="about-us.html">About Us</a></li>
-                                  <li><a href="our-services.html">Our Services</a></li>
+                                  <li><a href="our-services.html">User Training</a></li>
                                   <li><a href="contact-us.html">Contact Us</a></li>
                                   
                               </ul>

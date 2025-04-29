@@ -11,6 +11,8 @@ use Illuminate\Queue\SerializesModels;
 use Illuminate\Support\Facades\Log;
 use Symfony\Component\Process\Process;
 use Symfony\Component\Process\Exception\ProcessFailedException;
+use Illuminate\Support\Facades\File;
+
 
 class startScanJob implements ShouldQueue
 {
@@ -28,45 +30,55 @@ class startScanJob implements ShouldQueue
     public function handle()
     {
         try {
-            // Log the start of the job processing
             Log::info("ScanStartJob processing for Scan ID: " . $this->scanId);
-
-            // Fetch the scan data from the database using the given $scanId
+    
             $scanData = Scans::find($this->scanId);
             if (!$scanData) {
                 Log::error("Scan not found with ID: " . $this->scanId);
                 return;
             }
-
+    
             $targetIp = $scanData->target;
-            // Log the target IP address before sanitizing
             Log::info("Target IP: " . $targetIp);
-
-            // Build the command to run the scan using nmap
-            $command = '"C:\\Program Files (x86)\\Nmap\\nmap.exe" -A ' . $targetIp;
+    
+            // Define a custom folder and file path
+            $folderPath = "D:\\senior_project\\app\\scans"; // double backslashes for Windows path
+            if (!File::exists($folderPath)) {
+                File::makeDirectory($folderPath, 0755, true);
+            }
+    
+            $fileName = "scan_{$this->scanId}_" . time() . ".txt";
+            $filePath = $folderPath . DIRECTORY_SEPARATOR . $fileName;
+    
+            // Build command
+            $command = "\"C:\\Program Files (x86)\\Nmap\\nmap.exe\" -sT {$targetIp} -oN \"$filePath\"";
             Log::info("Executing command: $command");
-
-            // Use Laravel's Process class to execute the command
+    
             $process = Process::fromShellCommandline($command);
+            $process->setTimeout(300);
             $process->run();
-
-            // Check if the command was successful
+    
             if (!$process->isSuccessful()) {
                 throw new ProcessFailedException($process);
             }
-
-            // Log the output of the command
+    
             Log::info("Command output: " . $process->getOutput());
-
-            // Log successful completion of the scan
+    
+            // Save result info to DB
+            $scanData->file = $fileName;
+            $scanData->status = 'completed';
+            $scanData->save();
+    
+            Log::info("Scan saved to: $filePath");
             Log::info("Scan completed successfully for Target IP: " . $targetIp);
-
+    
         } catch (\Exception $e) {
-            // Log any errors or exceptions that occur
             Log::error("Error in ScanStartJob: " . $e->getMessage());
-            Log::error($e->getTraceAsString());  // Log the stack trace for better debugging
+            Log::error($e->getTraceAsString());
         }
     }
+    
+
 
     // Optionally set the retry delay between attempts
     public function retryAfter()

@@ -10,7 +10,7 @@
                 <div class="header-text">
                   <h2>Get <em>ready</em> for your enterprise<br>&amp; secure <em>all aspects</em></h2>
                   <div class="div-dec"></div>
-                  <p>Cyberattack specializes in vulnerability and risk management, offering services like penetration testing, vulnerability assessments, and threat hunting as core solutions. We centralize security tools and insights in an intuitive dashboard to help you effectively manage and reduce risks.</p>
+                  <p>VulnIQ specializes in vulnerability and risk management, offering services like penetration testing, vulnerability assessments, and threat hunting as core solutions. We centralize security tools and insights in an intuitive dashboard to help you effectively manage and reduce risks.</p>
                   <div class="buttons">
                     <div class="green-button">
                       <a href="#">Discover More</a>
@@ -31,9 +31,11 @@
             <div class="row">
               <div class="col-lg-8">
                 <div class="header-text">
-                  <h2><em>Digital</em> Currency for you <br>&amp; Best <em>Crypto</em> Tips</h2>
+                  <h2><em>Cyber</em> Services for you <br>&amp; Best <em>Security</em> Tips</h2>
                   <div class="div-dec"></div>
-                  <p>You will see a bunch of free CSS templates when you search on Google. TemplateMo website is probably the best one because it is 100% free. It does not ask you anything in return. You have a total freedom to use any template for any purpose.</p>
+                  <p>  Discover trusted and free cybersecurity resources and tools tailored to your needs. 
+  At VulnIQ, we offer fully free, high-quality cybersecurity services without hidden conditions. 
+  You're free to use them for personal or professional projects to enhance your digital space and security.</p>
                   <div class="buttons">
                     <div class="green-button">
                       <a href="#">Discover More</a>
@@ -54,9 +56,13 @@
             <div class="row">
               <div class="col-lg-8">
                 <div class="header-text">
-                  <h2>Best One in Town<br>&amp; Crypto <em>Services</em></h2>
-                  <div class="div-dec"></div>
-                  <p>When you browse through different tags on TemplateMo website, you can see a variety of CSS templates which are responsive website designs for different individual needs. Please tell your friends about our website. Thank you.</p>
+                <h2>Best in Town<br>&amp; Trusted <em>Security</em> Services</h2>
+<div class="div-dec"></div>
+<p>
+  We specialize in comprehensive cybersecurity services, including vulnerability assessments, risk management, and threat mitigation. 
+  Our mission is to protect your digital assets with proactive solutions tailored to your organization's needs. 
+  Partner with us to strengthen your security posture and stay ahead of evolving threats.
+</p>
                   <div class="buttons">
                     <div class="green-button">
                       <a href="#">Discover More</a>

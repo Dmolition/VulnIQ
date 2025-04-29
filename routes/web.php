@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AdminController;
 
 /*
@@ -15,12 +16,18 @@ use App\Http\Controllers\AdminController;
 |
 */
 
+
+
+
+
 route::get('/',[AdminController::class,'home']);
 
 
 
 
 route::get('/home',[AdminController::class,'index'])->name('home');
+
+
 
 route::get('/create_scan',[AdminController::class,'create_scan']);
 
@@ -33,3 +40,4 @@ route::get('/scan_delete/{id}',[AdminController::class,'scan_delete']);
 route::get('/scan_start/{id}',[AdminController::class,'scan_start']);
 
 route::get('/scan_detail',[AdminController::class,'scan_detail']);
+

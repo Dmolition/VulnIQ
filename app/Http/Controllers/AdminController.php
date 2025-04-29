@@ -11,6 +11,7 @@ use Illuminate\Support\Facades\DB;
 use App\Models\scan_results;
 use App\Models\Scans;
 use App\Jobs\startScanJob; 
+use App\Jobs\startTlsScanJob;
 
 class AdminController extends Controller
 {
@@ -96,24 +97,66 @@ class AdminController extends Controller
     }
 
  
-    public function scan_start($id)
-    {
+    //public function scan_start($id)
+    //{
         
         //$scanJob = new startScanJob();
         //$this->dispatch($scanJob);
 
           // Dispatch the job with the required argument
-          startScanJob::dispatch($id);
+          //startScanJob::dispatch($id);
 
           // Return a response indicating the scan has been queued
-          return redirect()->back()->with('success', 'Scan has been queued.');
+          //return redirect()->back()->with('success', 'Scan has been queued.');
 
+    //}
+
+    public function scan_start($id)
+{
+    $scan = Scans::find($id);
+
+    if (!$scan) {
+        return redirect()->back()->with('error', 'Scan not found.');
     }
 
+    switch ($scan->scan_type) {
+        case 'quick':
+            startScanJob::dispatch($id);
+            break;
 
+        case 'tls':
+            startTlsScanJob::dispatch($id);
+            break;
 
+        case 'full':
+            startScanJob::dispatch($id);
+            break;
 
+        case 'ai':
+            // Example: startAiScanJob::dispatch($id);
+            break;
+
+        default:
+            return redirect()->back()->with('error', 'Invalid scan type.');
+    }
+
+    return redirect()->back()->with('success', 'Scan has been queued.');
+}
     
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     public function scan_detail()
     {
@@ -121,6 +164,13 @@ class AdminController extends Controller
     }
 
 }
+
+
+
+
+
+
+
 
 
 

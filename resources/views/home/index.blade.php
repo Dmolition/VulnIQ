@@ -2,7 +2,7 @@
 <html lang="en">
 
   <head>
-    <title>CyberAttack</title>
+    <title>VulnIQ</title>
 
 @include('home.css')
   </head>

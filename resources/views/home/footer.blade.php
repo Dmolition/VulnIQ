@@ -2,7 +2,7 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-12">
-          <p>Copyright © 2025 CyberAttack Co., Ltd. All Rights Reserved. 
+          <p>Copyright © 2025 VulnIQ Co., Ltd. All Rights Reserved. 
           
           <br>Designed by <a title="CSS Templates" rel='sponsored' target="_blank">MAlkhunaizi</a></p>
         </div>
