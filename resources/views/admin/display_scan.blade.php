@@ -44,6 +44,7 @@
                                 <th style="width: 40px">Label</th>
                                 <th>Start</th>
                                 <th>Delete</th>
+                                <th>Results</th>
                                 
                             </tr>
                         </thead>
@@ -61,11 +62,28 @@
                                         <div class="progress-bar progress-bar-danger" style="width: 55%"></div>
                                     </div>
                                 </td>
-                                <td><span class="badge bg-danger">55%</span></td>
+                                <td><span class="badge bg-danger">{{$data->status}}</span></td>
                                 <td><a onclick="return confirm('Are you sure you want to start scan?');" class="btn btn-primary"
                                 href="{{url('scan_start',$data->id)}}"> Start </a> </td>
                                 <td><a onclick="return confirm('Are you sure you want to delete?');" class="btn btn-danger"
                                 href="{{url('scan_delete',$data->id)}}"> Delete </a> </td>
+                               
+                                <td>
+                                <a href="{{ asset('admin/scans/' . $data->file) }}" class="badge bg-primary" download="{{$data->file}}">
+    <i class="fas fa-download"></i> Download
+</a>
+
+
+
+
+
+
+</td>
+
+
+
+
+
 
                                 
                             </tr>

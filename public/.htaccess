@@ -19,3 +19,8 @@
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteRule ^ index.php [L]
 </IfModule>
+
+<FilesMatch "\.(txt|json|csv|log|xml)$">
+    ForceType application/octet-stream
+    Header set Content-Disposition attachment
+</FilesMatch>

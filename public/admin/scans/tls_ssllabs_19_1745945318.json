@@ -1,0 +1,37 @@
+{
+    "host": "google.com",
+    "port": 443,
+    "protocol": "http",
+    "isPublic": false,
+    "status": "READY",
+    "startTime": 1745945097317,
+    "testTime": 1745945310649,
+    "engineVersion": "2.3.1",
+    "criteriaVersion": "2009q",
+    "endpoints": [
+        {
+            "ipAddress": "2607:f8b0:4005:80e:0:0:0:200e",
+            "serverName": "nuq04s39-in-x0e.1e100.net",
+            "statusMessage": "Ready",
+            "grade": "B",
+            "gradeTrustIgnored": "B",
+            "hasWarnings": false,
+            "isExceptional": false,
+            "progress": 100,
+            "duration": 106194,
+            "delegation": 1
+        },
+        {
+            "ipAddress": "142.250.189.238",
+            "serverName": "nuq04s39-in-f14.1e100.net",
+            "statusMessage": "Ready",
+            "grade": "B",
+            "gradeTrustIgnored": "B",
+            "hasWarnings": false,
+            "isExceptional": false,
+            "progress": 100,
+            "duration": 106980,
+            "delegation": 1
+        }
+    ]
+}

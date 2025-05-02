@@ -72,7 +72,7 @@ label {
 
     <div class="div_deg">
         <label>Scan Type</label>
-        <select name="scan_type" class="form-control" required>
+        <select name="scan_type" class="form-control" style="width: 380px; margin-left: 200px; margin-top: -40px;" required>
             <option value="full">Full Scan</option>
             <option value="quick">Host Discovery</option>
             <option value="tls">TLS Security</option>

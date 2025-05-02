@@ -1,0 +1,19 @@
+# Nmap 7.95 scan initiated Tue Apr 29 19:27:23 2025 as: "C:\\Program Files (x86)\\Nmap\\nmap.exe" -sT -oN D:\\senior_project\\app\\scans\\scan_16_1745944043.txt 192.168.11.131
+Nmap scan report for 192-168-11-131.rev.bb.zain.com (192.168.11.131)
+Host is up (0.0042s latency).
+Not shown: 989 filtered tcp ports (no-response)
+PORT      STATE SERVICE
+21/tcp    open  ftp
+22/tcp    open  ssh
+80/tcp    open  http
+4848/tcp  open  appserv-http
+5985/tcp  open  wsman
+8080/tcp  open  http-proxy
+8383/tcp  open  m2mservices
+9200/tcp  open  wap-wsp
+49153/tcp open  unknown
+49154/tcp open  unknown
+49176/tcp open  unknown
+MAC Address: 00:0C:29:22:C4:F0 (VMware)
+
+# Nmap done at Tue Apr 29 19:27:29 2025 -- 1 IP address (1 host up) scanned in 6.58 seconds

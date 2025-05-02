@@ -13,10 +13,10 @@
           <img src="admin/dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
-          <a href="#" class="d-block"> Ahmed Alsaeed</a>
-          <p style="font-size: 12px;">Senior Pentester</p>
+          <a href="#" class="d-block"> {{ Auth::user()->name }}</a>
+          <p style="font-size: 12px;">{{ Auth::user()->email }}</p>
         </div>
-      </div>
+</div>
 
       <!-- SidebarSearch Form -->
       <div class="form-inline">
@@ -87,6 +87,43 @@
                 <a href="{{url('scan_detail')}}" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Scan Details</p>
+                </a>
+              </li>
+             
+</ul>
+<li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-bomb"></i>
+              <p>
+                Attack Simulation 
+                <i class="fas fa-angle-left right"></i>
+                <span class="badge badge-info right">6</span>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Brute Force</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Sql Injection</p>
+                </a>
+              </li>
+
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Dictionary Attack</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>XSS</p>
                 </a>
               </li>
              

@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Response;
+use Illuminate\Support\Facades\Storage;
 
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
@@ -143,8 +145,6 @@ class AdminController extends Controller
     return redirect()->back()->with('success', 'Scan has been queued.');
 }
     
-
-
 
 
 

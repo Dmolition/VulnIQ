@@ -42,7 +42,7 @@ class startScanJob implements ShouldQueue
             Log::info("Target IP: " . $targetIp);
     
             // Define a custom folder and file path
-            $folderPath = "D:\\senior_project\\app\\scans"; // double backslashes for Windows path
+            $folderPath = "D:\senior_project\public\admin\scans"; // double backslashes for Windows path
             if (!File::exists($folderPath)) {
                 File::makeDirectory($folderPath, 0755, true);
             }
