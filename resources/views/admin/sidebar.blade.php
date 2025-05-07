@@ -97,36 +97,55 @@
               <p>
                 Attack Simulation 
                 <i class="fas fa-angle-left right"></i>
-                <span class="badge badge-info right">6</span>
+                <span class="badge badge-info right">7</span>
               </p>
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="#" class="nav-link">
+                <a href="{{url('brute_force')}}" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Brute Force</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="#" class="nav-link">
+                <a href="{{url('xss')}}" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>XSS</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="{{url('sql_injection')}}" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Sql Injection</p>
                 </a>
               </li>
 
               <li class="nav-item">
-                <a href="#" class="nav-link">
+                <a href="{{url('dictionary_attack')}}" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Dictionary Attack</p>
                 </a>
               </li>
+              
+             
+</ul>
+
+<li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-copy"></i>
+              <p>
+                Interactive Shell
+                <i class="fas fa-angle-left right"></i>
+                <span class="badge badge-info right">6</span>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="#" class="nav-link">
+                <a href="{{url('shell')}}" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>XSS</p>
+                  <p>My Shell</p>
                 </a>
               </li>
-             
 </ul>
 <ul>
           

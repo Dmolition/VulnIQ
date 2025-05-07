@@ -23,6 +23,10 @@ use Illuminate\Support\Facades\File;
 
 route::get('/',[AdminController::class,'home']);
 
+Route::get('/our-services', function () {
+    return view('home.our-services');
+});
+
 
 
 
@@ -42,3 +46,30 @@ route::get('/scan_start/{id}',[AdminController::class,'scan_start']);
 
 route::get('/scan_detail',[AdminController::class,'scan_detail']);
 
+route::get('/brute_force', [AdminController::class, 'brute_force']);
+
+route::get('/dictionary_attack', [AdminController::class, 'dictionary_attack']);
+
+route::get('/sql_injection', [AdminController::class, 'sql_injection']);
+
+route::get('/xss', [AdminController::class, 'xss']);
+
+Route::post('/simulate_xss', [AdminController::class, 'simulate_xss']);
+
+Route::get('/antivirus_game', function () {
+    return view('home.antivirus_game');
+});
+
+
+Route::get('/phishing_game', function () {
+    return view('home.phishing_game');
+});
+
+Route::get('/social_game', function () {
+    return view('home.social_game');
+});
+
+Route::post('/simulatesqlmap', [AdminController::class, 'simulatesqlmap']);
+
+Route::get('/admin/shell', [AdminController::class, 'adminShell'])->name('admin.shell');
+Route::post('/admin/execute-shell-command', [AdminController::class, 'executeShellCommand'])->name('admin.execute-shell-command');

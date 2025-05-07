@@ -12,7 +12,7 @@
   <link rel="stylesheet" href="admin/plugins/datatables-buttons/css/buttons.bootstrap4.css">
   <!-- Theme style -->
   <link rel="stylesheet" href="admin\dist\css\adminlte.min.css">
-    <title>Donut Charts</title>
+    <title>VulnIQ</title>
     @include('admin.css') <!-- Your custom admin CSS -->
 
     <!-- Chart.js CDN -->
@@ -264,7 +264,7 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1>DataTables</h1>
+            <h1>Scan Results</h1>
           </div>
         
         </div>
@@ -278,220 +278,98 @@
            
             <div class="card">
               <div class="card-header">
-                <h3 class="card-title">DataTable with default features</h3>
+                <h3 class="card-title">Scan Results with Report Generation</h3>
               </div>
               <!-- /.card-header -->
               <div class="card-body">
                 <table id="example1" class="table table-bordered table-striped">
                   <thead>
                   <tr>
-                    <th>Rendering engine</th>
-                    <th>Browser</th>
-                    <th>Platform(s)</th>
-                    <th>Engine version</th>
-                    <th>CSS grade</th>
-                  </tr>
-                  </thead>
-                  <tbody>
-                  <tr>
-                    <td>Trident</td>
-                    <td>Internet
-                      Explorer 4.0
-                    </td>
-                    <td>Win 95+</td>
-                    <td> 4</td>
-                    <td>X</td>
-                  </tr>
-                  <tr>
-                    <td>Trident</td>
-                    <td>Internet
-                      Explorer 5.0
-                    </td>
-                    <td>Win 95+</td>
-                    <td>5</td>
-                    <td>C</td>
-                  </tr>
-                  <tr>
-                    <td>Trident</td>
-                    <td>Internet
-                      Explorer 5.5
-                    </td>
-                    <td>Win 95+</td>
-                    <td>5.5</td>
-                    <td>A</td>
-                  </tr>
-                  <tr>
-                    <td>Trident</td>
-                    <td>Internet
-                      Explorer 6
-                    </td>
-                    <td>Win 98+</td>
-                    <td>6</td>
-                    <td>A</td>
-                  </tr>
-                  <tr>
-                    <td>Trident</td>
-                    <td>Internet Explorer 7</td>
-                    <td>Win XP SP2+</td>
-                    <td>7</td>
-                    <td>A</td>
-                  </tr>
-                  <tr>
-                    <td>Presto</td>
-                    <td>Opera 8.0</td>
-                    <td>Win 95+ / OSX.2+</td>
-                    <td>-</td>
-                    <td>A</td>
-                  </tr>
-                  <tr>
-                    <td>Presto</td>
-                    <td>Opera 8.5</td>
-                    <td>Win 95+ / OSX.2+</td>
-                    <td>-</td>
-                    <td>A</td>
-                  </tr>
-                  <tr>
-                    <td>Presto</td>
-                    <td>Opera 9.2</td>
-                    <td>Win 88+ / OSX.3+</td>
-                    <td>-</td>
-                    <td>A</td>
-                  </tr>
-                  <tr>
-                    <td>Presto</td>
-                    <td>Opera 9.5</td>
-                    <td>Win 88+ / OSX.3+</td>
-                    <td>-</td>
-                    <td>A</td>
-                  </tr>
-                  <tr>
-                    <td>Presto</td>
-                    <td>Opera for Wii</td>
-                    <td>Wii</td>
-                    <td>-</td>
-                    <td>A</td>
-                  </tr>
-                  <tr>
-                    <td>Presto</td>
-                    <td>Nokia N800</td>
-                    <td>N800</td>
-                    <td>-</td>
-                    <td>A</td>
-                  </tr>
-                  <tr>
-                    <td>Presto</td>
-                    <td>Nintendo DS browser</td>
-                    <td>Nintendo DS</td>
-                    <td>8.5</td>
-                    <td>C/A<sup>1</sup></td>
-                  </tr>
-                  <tr>
-                    <td>KHTML</td>
-                    <td>Konqureror 3.1</td>
-                    <td>KDE 3.1</td>
-                    <td>3.1</td>
-                    <td>C</td>
-                  </tr>
-                  <tr>
-                    <td>KHTML</td>
-                    <td>Konqureror 3.3</td>
-                    <td>KDE 3.3</td>
-                    <td>3.3</td>
-                    <td>A</td>
-                  </tr>
-                  <tr>
-                    <td>KHTML</td>
-                    <td>Konqureror 3.5</td>
-                    <td>KDE 3.5</td>
-                    <td>3.5</td>
-                    <td>A</td>
-                  </tr>
-                  <tr>
-                    <td>Tasman</td>
-                    <td>Internet Explorer 4.5</td>
-                    <td>Mac OS 8-9</td>
-                    <td>-</td>
-                    <td>X</td>
-                  </tr>
-                  <tr>
-                    <td>Tasman</td>
-                    <td>Internet Explorer 5.1</td>
-                    <td>Mac OS 7.6-9</td>
-                    <td>1</td>
-                    <td>C</td>
-                  </tr>
-                  <tr>
-                    <td>Tasman</td>
-                    <td>Internet Explorer 5.2</td>
-                    <td>Mac OS 8-X</td>
-                    <td>1</td>
-                    <td>C</td>
-                  </tr>
-                  <tr>
-                    <td>Misc</td>
-                    <td>NetFront 3.1</td>
-                    <td>Embedded devices</td>
-                    <td>-</td>
-                    <td>C</td>
-                  </tr>
-                  <tr>
-                    <td>Misc</td>
-                    <td>NetFront 3.4</td>
-                    <td>Embedded devices</td>
-                    <td>-</td>
-                    <td>A</td>
-                  </tr>
-                  <tr>
-                    <td>Misc</td>
-                    <td>Dillo 0.8</td>
-                    <td>Embedded devices</td>
-                    <td>-</td>
-                    <td>X</td>
-                  </tr>
-                  <tr>
-                    <td>Misc</td>
-                    <td>Links</td>
-                    <td>Text only</td>
-                    <td>-</td>
-                    <td>X</td>
-                  </tr>
-                  <tr>
-                    <td>Misc</td>
-                    <td>Lynx</td>
-                    <td>Text only</td>
-                    <td>-</td>
-                    <td>X</td>
-                  </tr>
-                  <tr>
-                    <td>Misc</td>
-                    <td>IE Mobile</td>
-                    <td>Windows Mobile 6</td>
-                    <td>-</td>
-                    <td>C</td>
-                  </tr>
-                  <tr>
-                    <td>Misc</td>
-                    <td>PSP browser</td>
-                    <td>PSP</td>
-                    <td>-</td>
-                    <td>C</td>
-                  </tr>
-                  <tr>
-                    <td>Other browsers</td>
-                    <td>All others</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>U</td>
-                  </tr>
-                  </tbody>
-                  <tfoot>
-                  <tr>
-                    <th>Rendering engine</th>
-                    <th>Browser</th>
-                    <th>Platform(s)</th>
-                    <th>Engine version</th>
-                    <th>CSS grade</th>
-                  </tr>
+      <th>Port</th>
+      <th>State</th>
+      <th>Service</th>
+      <th>Version</th>
+      <th>Vulnerability</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>21/tcp</td>
+      <td>open</td>
+      <td>ftp</td>
+      <td>vsftpd 2.3.4</td>
+      <td>Backdoor Command Execution</td>
+    </tr>
+    <tr>
+      <td>22/tcp</td>
+      <td>open</td>
+      <td>ssh</td>
+      <td>OpenSSH 4.7p1 Debian 8ubuntu1</td>
+      <td>Weak SSH Configuration</td>
+    </tr>
+    <tr>
+      <td>23/tcp</td>
+      <td>open</td>
+      <td>telnet</td>
+      <td>Linux telnetd</td>
+      <td>Plaintext Credentials</td>
+    </tr>
+    <tr>
+      <td>25/tcp</td>
+      <td>open</td>
+      <td>smtp</td>
+      <td>Postfix smtpd</td>
+      <td>SMTP User Enumeration</td>
+    </tr>
+    <tr>
+      <td>80/tcp</td>
+      <td>open</td>
+      <td>http</td>
+      <td>Apache httpd 2.2.8</td>
+      <td>Multiple Web Vulnerabilities</td>
+    </tr>
+    <tr>
+      <td>139/tcp</td>
+      <td>open</td>
+      <td>netbios-ssn</td>
+      <td>Samba smbd 3.X</td>
+      <td>SMB Enumeration</td>
+    </tr>
+    <tr>
+      <td>445/tcp</td>
+      <td>open</td>
+      <td>microsoft-ds</td>
+      <td>Samba smbd 3.X</td>
+      <td>SMB Vulnerabilities</td>
+    </tr>
+    <tr>
+      <td>3306/tcp</td>
+      <td>open</td>
+      <td>mysql</td>
+      <td>MySQL 5.0.51a-3ubuntu5</td>
+      <td>Weak Credentials</td>
+    </tr>
+    <tr>
+      <td>5432/tcp</td>
+      <td>open</td>
+      <td>postgresql</td>
+      <td>PostgreSQL DB</td>
+      <td>Default Credentials</td>
+    </tr>
+    <tr>
+      <td>5900/tcp</td>
+      <td>open</td>
+      <td>vnc</td>
+      <td>VNC protocol</td>
+      <td>No Authentication</td>
+    </tr>
+    <tr>
+      <td>8180/tcp</td>
+      <td>open</td>
+      <td>http</td>
+      <td>Apache Tomcat/Coyote JSP engine 1.1</td>
+      <td>Tomcat Manager Access</td>
+    </tr>
                   </tfoot>
                 </table>
               </div>
@@ -543,19 +421,60 @@
 <script>
   $(function () {
     $("#example1").DataTable({
-      "responsive": true, "lengthChange": false, "autoWidth": false,
-      "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
+      responsive: true,
+      lengthChange: false,
+      autoWidth: false,
+      buttons: [
+        {
+          extend: 'copy',
+          title: 'Scan Results',
+          filename: 'scan_results_copy'
+        },
+        {
+          extend: 'csv',
+          title: 'Scan Results',
+          filename: 'scan_results_csv'
+        },
+        {
+          extend: 'excel',
+          title: 'Scan Results',
+          filename: 'scan_results_excel'
+        },
+        {
+          extend: 'pdf',
+          title: 'Scan Results',
+          filename: 'scan_results_pdf'
+        },
+        {
+          extend: 'print',
+          title: 'Scan Results'
+        },
+        {
+          text: 'AI Report',
+          action: function () {
+            const link = document.createElement('a');
+            link.href = '/admin/scans/nist_risk_report.pdf'; // Adjust path as needed
+            link.download = 'ai_recommendation_report.pdf';
+            link.click();
+          }
+        },
+        'colvis'
+      ]
     }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
+
     $('#example2').DataTable({
-      "paging": true,
-      "lengthChange": false,
-      "searching": false,
-      "ordering": true,
-      "info": true,
-      "autoWidth": false,
-      "responsive": true,
+      paging: true,
+      lengthChange: false,
+      searching: false,
+      ordering: true,
+      info: true,
+      autoWidth: false,
+      responsive: true
     });
   });
 </script>
+
+
+
 </body>
 </html>

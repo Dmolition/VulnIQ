@@ -98,16 +98,16 @@
                   <i class="fas fa-fish"></i>
                   <h4>Phishing Awareness Training</h4>
                   <p><strong>Learn how to identify and avoid fake emails and malicious links that trick users into sharing sensitive information.</strong></p>
-                  <p><strong>Free Course:</strong><br>
+                  <p><strong>Course:</strong><br>
                     📘 <a href="https://www.cybrary.it/course/phishing" target="_blank" rel="noopener noreferrer">
                         Cybrary – Phishing Awareness Course
                     </a><br>
                     Covers phishing tactics and real-world detection techniques.
                 </p>
             
-                <p><strong>Game:</strong><br>
-                    🧪 <a href="{{url('antivirus_game')}}" class="nav-link">
-                        Phishing Quiz
+                <p><strong> Game:</strong><br>
+                    🧪 <a href="{{url('phishing_game')}}" target="_blank" rel="noopener noreferrer">
+                        Play Me
                     </a><br>
                     Interactive test to practice spotting phishing emails with instant feedback.
                 </p>
@@ -127,16 +127,16 @@
                   
     <p><strong>Understand how attackers manipulate people rather than systems to gain access.</strong></p>
 
-    <p><strong>Free Course:</strong><br>
+    <p><strong>Course:</strong><br>
         📘 <a href="https://www.coursera.org/specializations/intro-cyber-security" target="_blank" rel="noopener noreferrer">
             Coursera – Introduction to Cyber Security by NYU
         </a><br>
         Includes lessons on social engineering, impersonation, and psychological tricks.
     </p>
 
-    <p><strong>Quiz:</strong><br>
-        🧪 <a href="https://www.cybrary.it/assessment/social-engineering" target="_blank" rel="noopener noreferrer">
-            Cybrary – Social Engineering Quiz
+    <p><strong>Game:</strong><br>
+        🧪 <a href="{{url('social_game')}}" target="_blank" rel="noopener noreferrer">
+            Test – Your Awareness
         </a><br>
         Quick assessment to test awareness of common manipulation tactics.
     </p>
@@ -164,16 +164,16 @@
                   <h4>Ransomware Prevention</h4>
                   <p><strong>Learn how to protect your data and devices from ransomware attacks that can lock or destroy files.</strong></p>
 
-                  <p><strong>Free Course:</strong><br>
+                  <p><strong>Course:</strong><br>
                       📘 <a href="https://www.cdse.edu/Training/Security-Training-Videos/Cybersecurity-Security/Ransomware/" target="_blank" rel="noopener noreferrer">
                           CDSE – Ransomware Awareness Video
                       </a><br>
                       Provides insights into ransomware spread, prevention, and recovery plans.
                   </p>
               
-                  <p><strong>Quiz:</strong><br>
-                      🧪 <a href="https://www.pureversity.com/blog/ransomware-quiz" target="_blank" rel="noopener noreferrer">
-                          Pureversity – Ransomware Quiz
+                  <p><strong>Game:</strong><br>
+                      🧪 <a href="{{url('antivirus_game')}}" target="_blank" rel="noopener noreferrer">
+                          Play Me
                       </a><br>
                       Test knowledge on ransomware defense strategies and safe practices.
                   </p>

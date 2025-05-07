@@ -145,25 +145,133 @@ class AdminController extends Controller
     return redirect()->back()->with('success', 'Scan has been queued.');
 }
     
-
-
-
-
-
-
-
-
-
-
-
-
-
     public function scan_detail()
     {
         return view('admin.scan_detail');
     }
 
+    public function brute_force()
+    {
+        return view('admin.brute_force');
+    }
+
+    public function dictionary_attack()
+    {
+        return view('admin.dictionary_attack');
+    }
+
+    public function sql_injection()
+    {
+        return view('admin.sql_injection');
+    }
+
+    public function xss()
+    {
+        return view('admin.xss');
+    }
+
+
+    public function simulate_xss(Request $request)
+{
+    $input = $request->input('user_input');
+
+    // WARNING: Do NOT do this in a real application
+    // This is for simulation/demo only
+    return back()->with('result', $input);
 }
+
+
+public function antivirus_game()
+{
+    return view('admin.antivirus_game');
+}
+
+
+public function simulateSqlmap(Request $request)
+{
+    $url = escapeshellarg($request->input('target_url'));
+    $options = escapeshellcmd($request->input('options'));
+
+    // Example path – adjust to where sqlmap.py actually is on your system
+    $sqlmapPath = 'C:\sqlmap\sqlmap.py';  // Use double backslashes \\ or forward slashes /
+    $sqlmapPath = str_replace('\\', '/', $sqlmapPath); // optional: normalize to forward slashes
+
+    // Build command
+    $command = "python $sqlmapPath -u $url $options 2>&1";
+
+    // Execute
+    $output = shell_exec($command);
+
+    return redirect()->back()->with('output', $output);
+}
+
+public function adminShell()
+{
+    return view('admin.shell');
+}
+
+public function executeShellCommand(Request $request)
+{
+    $command = $request->input('command');
+
+    // !!! CRITICAL SECURITY: STRICT COMMAND WHITELISTING AND ARGUMENT SANITIZATION !!!
+    $allowedCommands = [
+        'nmap',
+        'nikto',
+        'ping',
+        'traceroute',
+        'whois',
+        // Add ONLY the commands you absolutely need and understand the risks of.
+    ];
+
+    $parts = explode(' ', trim($command));
+    $baseCommand = escapeshellcmd($parts[0]); // Escape the base command
+
+    if (!in_array($baseCommand, $allowedCommands)) {
+        Log::warning('Admin Shell: Unauthorized command attempted by user ' . Auth::id() . ': ' . $command);
+        return response()->json(['output' => 'Command not allowed.'], 400);
+    }
+
+    // !!! CRITICAL SECURITY: ARGUMENT SANITIZATION (VERY BASIC EXAMPLE - NEEDS IMPROVEMENT) !!!
+    $sanitizedArguments = '';
+    for ($i = 1; $i < count($parts); $i++) {
+        $sanitizedArguments .= escapeshellarg($parts[$i]) . ' ';
+    }
+
+    $fullCommand = $baseCommand . ' ' . trim($sanitizedArguments);
+
+    // !!! SECURITY: LOGGING ALL EXECUTED COMMANDS !!!
+    Log::info('Admin Shell: User ' . Auth::id() . ' executed command: ' . $fullCommand);
+
+    $process = Process::fromShellCommandline($fullCommand);
+
+    // !!! SECURITY: TIMEOUT TO PREVENT HANGING !!!
+    $process->setTimeout(300);
+
+    try {
+        $process->run();
+
+        if (!$process->isSuccessful()) {
+            Log::error('Admin Shell: Command failed for user ' . Auth::id() . ': ' . $fullCommand . "\n" . $process->getErrorOutput());
+            throw new ProcessFailedException($process);
+        }
+
+        $output = $process->getOutput();
+        return response()->json(['output' => $output]);
+
+    } catch (ProcessFailedException $e) {
+        Log::error('Admin Shell: Exception during command execution for user ' . Auth::id() . ': ' . $fullCommand . "\n" . $e->getMessage());
+        return response()->json(['output' => $e->getMessage()], 500);
+    }
+}
+
+
+
+
+
+}
+
+
 
 
 

@@ -15,7 +15,7 @@
                           <li class="has-sub">
                               <a href="javascript:void(0)">Pages</a>
                               <ul class="sub-menu">
-                                  <li><a href="our-services.html">User Training</a></li>
+                                  <li><a href="{{ url('/our-services') }}">User Training</a></li>
                                   <li><a href="contact-us.html">Contact Us</a></li>
                                   
                               </ul>
