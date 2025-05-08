@@ -63,8 +63,22 @@
                                     </div>
                                 </td>
                                 <td><span class="badge bg-danger">{{$data->status}}</span></td>
-                                <td><a onclick="return confirm('Are you sure you want to start scan?');" class="btn btn-primary"
-                                href="{{url('scan_start',$data->id)}}"> Start </a> </td>
+                                <td>
+                                    @if($data->scan_type === 'full')
+                                        <button 
+                                            class="btn btn-primary start-full-scan" 
+                                            data-id="{{ $data->id }}"
+                                            onclick="return confirm('Are you sure you want to start full scan?');">
+                                            Start
+                                        </button>
+                                    @else
+                                        <a onclick="return confirm('Are you sure you want to start scan?');" 
+                                        class="btn btn-primary"
+                                        href="{{ url('scan_start', $data->id) }}">
+                                        Start
+                                        </a>
+                                    @endif
+                                </td>
                                 <td><a onclick="return confirm('Are you sure you want to delete?');" class="btn btn-danger"
                                 href="{{url('scan_delete',$data->id)}}"> Delete </a> </td>
                                
@@ -104,6 +118,48 @@
     @include('admin.footer') <!-- Footer -->
 
     <!-- Add any additional scripts if needed -->
+
+    <script>
+        console.log("Full scan script loaded");
+document.addEventListener('DOMContentLoaded', function () {
+    document.querySelectorAll('.start-full-scan').forEach(button => {
+        button.addEventListener('click', function () {
+            const scanId = this.dataset.id;
+
+            if (!confirm('Are you sure you want to start full scan?')) {
+                return;
+            }
+
+            fetch(`/scan_start/${scanId}`, {
+                method: 'GET',
+                headers: {
+                    'X-Requested-With': 'XMLHttpRequest',
+                    'X-CSRF-TOKEN': '{{ csrf_token() }}'
+                }
+            })
+            .then(response => {
+                if (!response.ok) throw new Error('Failed to start scan');
+                console.log('Scan started, checking status...');
+                return checkScanStatus(scanId);
+            })
+            .catch(error => console.error(error));
+        });
+    });
+
+    function checkScanStatus(scanId) {
+        const interval = setInterval(() => {
+            fetch(`/api/scans/${scanId}/status`)
+                .then(response => response.json())
+                .then(data => {
+                    if (data.status === 'completed') {
+                        clearInterval(interval);
+                        window.location.href = `/scans/${scanId}/download`;
+                    }
+                });
+        }, 3000);
+    }
+});
+</script>
 </body>
 
 </html>

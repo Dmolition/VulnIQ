@@ -1,11 +1,13 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Services\NessusService;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AdminController;
 use Illuminate\Support\Facades\Response;
 use Illuminate\Support\Facades\File;
+use App\Jobs\StartFullScanJob;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -42,3 +44,4 @@ route::get('/scan_start/{id}',[AdminController::class,'scan_start']);
 
 route::get('/scan_detail',[AdminController::class,'scan_detail']);
 
+route::get('/scans/{id}/download', [App\Http\Controllers\ScanController::class, 'download']);

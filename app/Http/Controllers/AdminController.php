@@ -12,8 +12,9 @@ use Illuminate\Support\Facades\DB;
 
 use App\Models\scan_results;
 use App\Models\Scans;
-use App\Jobs\startScanJob; 
+use App\Jobs\startScanJob;
 use App\Jobs\startTlsScanJob;
+use App\Jobs\StartFullScanJob;
 
 class AdminController extends Controller
 {
@@ -131,7 +132,7 @@ class AdminController extends Controller
             break;
 
         case 'full':
-            startScanJob::dispatch($id);
+            StartFullScanJob::dispatch($id);
             break;
 
         case 'ai':
