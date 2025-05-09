@@ -17,3 +17,6 @@ yarn-error.log
 /.idea
 /.vscode
 app/scans/venv/
+# Node dependencies
+node_modules/
+
