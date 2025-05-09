@@ -1,0 +1,37 @@
+{
+    "host": "www.uob.edu.bh",
+    "port": 443,
+    "protocol": "http",
+    "isPublic": false,
+    "status": "READY",
+    "startTime": 1746363084500,
+    "testTime": 1746363571426,
+    "engineVersion": "2.3.1",
+    "criteriaVersion": "2009q",
+    "endpoints": [
+        {
+            "ipAddress": "15.184.161.249",
+            "serverName": "ec2-15-184-161-249.me-south-1.compute.amazonaws.com",
+            "statusMessage": "Ready",
+            "grade": "B",
+            "gradeTrustIgnored": "B",
+            "hasWarnings": false,
+            "isExceptional": false,
+            "progress": 100,
+            "duration": 245918,
+            "delegation": 2
+        },
+        {
+            "ipAddress": "15.184.8.73",
+            "serverName": "ec2-15-184-8-73.me-south-1.compute.amazonaws.com",
+            "statusMessage": "Ready",
+            "grade": "B",
+            "gradeTrustIgnored": "B",
+            "hasWarnings": false,
+            "isExceptional": false,
+            "progress": 100,
+            "duration": 239674,
+            "delegation": 2
+        }
+    ]
+}

@@ -1,0 +1,43 @@
+Nmap Results:
+Starting Nmap 7.80 ( https://nmap.org ) at 2025-05-09 12:35 UTC
+Initiating Ping Scan at 12:35
+Scanning 192.168.100.77 [4 ports]
+Completed Ping Scan at 12:35, 0.07s elapsed (1 total hosts)
+Initiating Parallel DNS resolution of 1 host. at 12:35
+Completed Parallel DNS resolution of 1 host. at 12:35, 0.33s elapsed
+Initiating SYN Stealth Scan at 12:35
+Scanning 192.168.100.77 [1000 ports]
+Discovered open port 8080/tcp on 192.168.100.77
+Discovered open port 80/tcp on 192.168.100.77
+Completed SYN Stealth Scan at 12:35, 0.07s elapsed (1000 total ports)
+Nmap scan report for 192.168.100.77
+Host is up (0.0000070s latency).
+Not shown: 998 closed ports
+PORT     STATE SERVICE
+80/tcp   open  http
+8080/tcp open  http-proxy
+
+Read data files from: /usr/bin/../share/nmap
+Nmap done: 1 IP address (1 host up) scanned in 0.59 seconds
+           Raw packets sent: 1004 (44.152KB) | Rcvd: 1001 (40.036KB)
+
+
+Nikto Results:
+- Nikto v2.1.5
+---------------------------------------------------------------------------
++ Target IP:          192.168.100.77
++ Target Hostname:    192.168.100.77
++ Target Port:        8080
++ Start Time:         2025-05-09 12:35:44 (GMT0)
+---------------------------------------------------------------------------
++ Server: nginx/1.18.0 (Ubuntu)
++ Server leaks inodes via ETags, header found with file /, fields: 0x681ad2c1 0x264 
++ The anti-clickjacking X-Frame-Options header is not present.
++ No CGI Directories found (use '-C all' to force check all possible dirs)
++ 6544 items checked: 0 error(s) and 2 item(s) reported on remote host
++ End Time:           2025-05-09 12:35:46 (GMT0) (2 seconds)
+---------------------------------------------------------------------------
++ 1 host(s) tested
+
+
+Nessus Results:
