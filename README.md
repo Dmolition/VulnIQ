@@ -75,7 +75,36 @@ Vulniq is a modular, AI-driven platform designed to streamline vulnerability sca
 
 ## ⚙️ Installation & Setup
 
-> 💡 **Prerequisites:** Ensure Docker and Docker Compose are installed on your system.
+> 💡 **Prerequisites:** Run the following commands to install all required tools on a Debian/Ubuntu-based system. Use equivalents for macOS or Windows as needed.
+
+### 🧰 Install System Dependencies
+
+```bash
+# Install PHP and Composer
+sudo apt update && sudo apt install php php-cli php-mbstring unzip curl php-xml php-bcmath php-curl php-mysql git -y
+curl -sS https://getcomposer.org/installer | php
+sudo mv composer.phar /usr/local/bin/composer
+
+# Install Python 3 and pip
+sudo apt install python3 python3-pip python3-venv -y
+
+# Install Docker
+curl -fsSL https://get.docker.com -o get-docker.sh
+sh get-docker.sh
+sudo usermod -aG docker $USER
+
+# Install Docker Compose
+sudo curl -L "https://github.com/docker/compose/releases/download/v2.24.4/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+sudo chmod +x /usr/local/bin/docker-compose
+
+# Install Nmap
+sudo apt install nmap -y
+
+# Install Nikto
+sudo apt install nikto -y
+
+# Nessus must be downloaded and installed manually from Tenable
+
 
 ### 1. Clone the Repository
 
