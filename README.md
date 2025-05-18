@@ -103,8 +103,7 @@ sudo apt install nmap -y
 # Install Nikto
 sudo apt install nikto -y
 
-# Nessus must be downloaded and installed manually from Tenable
-
+```
 
 ### 1. Clone the Repository
 
