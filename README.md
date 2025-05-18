@@ -1,4 +1,4 @@
-# 🔐 Vulniq – AI-Powered Vulnerability & Risk Management Platform
+# 🔐 VulnIQ – AI-Powered Vulnerability & Risk Management Platform
 
 Vulniq is a modular, AI-driven platform designed to streamline vulnerability scanning, risk analysis, and security reporting. Built with Laravel, Flask, MySQL, Docker, and integrated with Ollama using LLaMA 3 LLM, Vulniq consolidates outputs from leading security tools into a single dashboard and generates risk intelligence reports tailored for technical and executive audiences.
 
