@@ -1,0 +1,33 @@
+version: '3'
+services:
+  nginx:
+    image: nginx:latest
+    container_name: nginx-container
+    ports:
+      - "80:80"
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf:ro
+    depends_on:
+      - scanner
+    networks:
+      - my-network
+
+
+  scanner:
+    container_name: scanner-container
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: ["http://example.com"]  # Default IP (to be replaced dynamically)
+    working_dir: /scripts
+    ports:
+       - "8080:8080"
+    volumes:
+      - ./scripts:/scripts:rw
+      - ./results:/results:rw
+    networks:
+      - my-network
+
+networks:
+  my-network:
+    driver: bridge
