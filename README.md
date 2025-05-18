@@ -4,6 +4,26 @@ Vulniq is a modular, AI-driven platform designed to streamline vulnerability sca
 
 ---
 
+## 🏗️ Architecture
+
+```txt
+                          +-----------------------------+
+                          |      Laravel (API/UI)       |
+                          +-----------------------------+
+                                     |
+             +-----------------------+------------------------+
+             |                       |                        |
+      +-------------+        +---------------+        +---------------+
+      |    MySQL    |        | Flask (AI API)|        | Ollama (LLM)  |
+      +-------------+        +---------------+        +---------------+
+             |
+             +----------------+
+             | Scanner Engine |
+             +----------------+
+             | Nmap / Nikto / |
+             | Nessus         |
+             +----------------+
+```
 ## 🧰 Key Features
 
 ### 🔎 Integrated Scanning Tools
@@ -38,26 +58,7 @@ Vulniq is a modular, AI-driven platform designed to streamline vulnerability sca
   - Integrated security tools
 
 ---
-## 🏗️ Architecture
 
-```txt
-                          +-----------------------------+
-                          |      Laravel (API/UI)       |
-                          +-----------------------------+
-                                     |
-             +-----------------------+------------------------+
-             |                       |                        |
-      +-------------+        +---------------+        +---------------+
-      |    MySQL    |        | Flask (AI API)|        | Ollama (LLM)  |
-      +-------------+        +---------------+        +---------------+
-             |
-             +----------------+
-             | Scanner Engine |
-             +----------------+
-             | Nmap / Nikto / |
-             | Nessus         |
-             +----------------+
-```
 
 ## 🏗️ Tech Stack
 
