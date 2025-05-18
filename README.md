@@ -1,6 +1,6 @@
 # 🔐 VulnIQ – AI-Powered Vulnerability & Risk Management Platform
 
-Vulniq is a modular, AI-driven platform designed to streamline vulnerability scanning, risk analysis, and security reporting. Built with Laravel, Flask, MySQL, Docker, and integrated with Ollama using LLaMA 3 LLM, Vulniq consolidates outputs from leading security tools into a single dashboard and generates risk intelligence reports tailored for technical and executive audiences.
+Vulniq is a modular, AI-driven platform designed to streamline vulnerability scanning, risk analysis, and security reporting. Built with Laravel, Flask, MySQL, Docker, Nginx, and integrated with Ollama using LLaMA 3 LLM, Vulniq consolidates outputs from leading security tools into a single dashboard and generates risk intelligence reports tailored for technical and executive audiences.
 
 ---
 
@@ -8,21 +8,26 @@ Vulniq is a modular, AI-driven platform designed to streamline vulnerability sca
 
 ```txt
                           +-----------------------------+
+                          |         AdminLTE            |
+                          +-----------------------------+
+                                     |
+                          +-----------------------------+
                           |      Laravel (API/UI)       |
                           +-----------------------------+
                                      |
-             +-----------------------+------------------------+
-             |                       |                        |
-      +-------------+        +---------------+        +---------------+
-      |    MySQL    |        | Flask (AI API)|        | Ollama (LLM)  |
-      +-------------+        +---------------+        +---------------+
-             |
-             +----------------+
-             | Scanner Engine |
-             +----------------+
-             | Nmap / Nikto / |
-             | Nessus         |
-             +----------------+
+         +----------------+----------+-------------+----------------+
+         |                |                        |                |
+  +-------------+  +---------------+        +---------------+  +----------------------------+
+  |    MySQL    |  | Flask (AI API)|        | Ollama (LLM)  |  |   Docker (Nginx + Tools)   |
+  +-------------+  +---------------+        +---------------+  +----------------------------+
+                                                                  |
+                                                           +----------------+
+                                                           | Scanner Engine |
+                                                           +----------------+
+                                                           | Nmap / Nikto / |
+                                                           | Nessus         |
+                                                           +----------------+
+
 ```
 ## 🧰 Key Features
 
@@ -56,21 +61,24 @@ Vulniq is a modular, AI-driven platform designed to streamline vulnerability sca
   - Ollama server
   - MySQL database
   - Integrated security tools
+  - **Nginx reverse proxy** – Handles internal routing from Laravel to scanner containers, ensuring clean and consistent communication between services.
 
 ---
 
 
 ## 🏗️ Tech Stack
 
-| Layer            | Technology         |
-|------------------|--------------------|
-| Backend          | Laravel (PHP)      |
-| AI Microservice  | Flask (Python)     |
-| Language Model   | Ollama + LLaMA 3   |
+| Layer            | Technology                             |
+|------------------|--------------------------------------|
+| Backend          | Laravel (PHP)                        |
+| AI Microservice  | Flask (Python)                      |
+| Language Model   | Ollama + LLaMA 3                    |
 | Frontend         | JavaScript (Vue or React recommended) |
-| Database         | MySQL              |
-| Scanners         | Nmap, Nikto, Nessus|
-| Containerization | Docker + Docker Compose |
+| Database         | MySQL                              |
+| Scanners         | Nmap, Nikto, Nessus                |
+| Reverse Proxy    | Nginx (within Docker for scanners)|
+| Containerization | Docker + Docker Compose            |
+
 
 ---
 
@@ -103,6 +111,15 @@ sudo apt install nmap -y
 
 # Install Nikto
 sudo apt install nikto -y
+
+# Install Nessus
+# Note: Nessus installation requires downloading the package from Tenable and installing it manually.
+# Below is a basic example for Debian/Ubuntu. Adjust version and URL as needed.
+
+wget https://downloads.nessus.org/nessus3dl.php?file=nessus-10.6.1-debian6_amd64.deb&licence_accept=yes&t=YOURTOKEN -O nessus.deb
+sudo dpkg -i nessus.deb
+sudo systemctl start nessusd
+sudo systemctl enable nessusd
 
 ```
 
