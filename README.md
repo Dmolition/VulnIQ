@@ -57,6 +57,7 @@ Vulniq is a modular, AI-driven platform designed to streamline vulnerability sca
              | Nmap / Nikto / |
              | Nessus         |
              +----------------+
+```
 
 ## 🏗️ Tech Stack
 
